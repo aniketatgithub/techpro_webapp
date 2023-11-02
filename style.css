@@ -1,0 +1,225 @@
+/* Reset default styles and set a background color */
+body, html {
+    margin: 0;
+    padding: 0;
+    min-height: 100%; /* Use min-height to ensure content pushes footer down */
+    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* A more modern font family */
+}
+
+/* Header styles */
+header {
+    background-color: #20232a; /* A shade that is easy on the eyes */
+    color: #61dafb; /* Light blue color for contrast and visibility */
+    text-align: center;
+    padding: 1rem 0; /* Use rem for scalable padding */
+}
+
+/* Navigation styles using flexbox */
+/* Navigation bar styles using flexbox */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Add horizontal padding */
+}
+
+.logo {
+    font-size: 1.8em; /* Adjust the size as necessary */
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Add some spacing between the letters for style */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .logo {
+        margin-bottom: 10px; /* Space between logo and nav items on smaller screens */
+    }
+    nav {
+        flex-direction: column;
+    }
+}
+
+nav a {
+    text-decoration: none;
+    color: #61dafb; /* Matching color for links */
+    transition: color 0.2s ease-in-out; /* Smooth transition for color change */
+}
+
+nav a:hover {
+    color: #ffffff; /* White color on hover for better visibility */
+}
+
+/* Add an underline on hover with a transition */
+nav a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: transparent;
+    transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+    background: #61dafb; /* The underline matches the link color */
+}
+
+
+/* Section styles */
+section {
+    background-color: #fff;
+    padding: 40px; /* Increased padding for better spacing */
+    margin: 20px 0; /* Only vertical margin */
+    border: none; /* Remove border for a cleaner look */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Add shadow for depth */
+}
+
+
+h2 {
+    font-size: 24px;
+}
+
+/* Form styles */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Footer styles */
+footer {
+    background: #20232a; /* Consistent with the header */
+    color: #61dafb;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto; /* Push footer to the bottom */
+    position: relative; /* Relative positioning */
+    clear: both; /* Clear any floating elements */
+    width: 100%;
+}
+
+/* Sticky footer fix for short pages */
+body::after {
+    content: '';
+    display: block;
+    height: 50px; /* Same height as footer */
+}
+
+/* Links styles */
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: #333; /* Adjust background color as needed */
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+section#products a {
+    color: #333;
+    background-color: #e2e2e2; /* Light grey background for visibility */
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 5px 0;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+section#products a:hover {
+    background-color: #d4d4d4; /* Slightly darker on hover for effect */
+    color: #20232a;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+    text-decoration: none; /* No underline on hover to keep it clean */
+}
+
+/* Grid Layout for products */
+#product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Better use of space */
+    gap: 40px; /* Increase gap for clarity */
+    padding: 0 20px; /* Add horizontal padding */
+}
+
+article {
+    border: none; /* Remove border for a cleaner look */
+    padding: 20px;
+    border-radius: 10px; /* Smoother corners */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for hover effect */
+}
+
+article:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* Increase shadow on hover */
+}
+
+/* ... (keep existing styles here) ... */
+
+/* Footer styles */
+footer {
+    background: #333; /* Adjust background color as needed */
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+/* ... (keep existing media queries here) ... */
+
+@media (min-width: 768px) {
+    /* ... (adjustments if necessary) ... */
+}
+
+@media (min-width: 1024px) {
+    /* ... (adjustments if necessary) ... */
+}

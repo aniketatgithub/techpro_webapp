@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login - TechPro Solutions</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">TechPro Solutions</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.php">Products/Services</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="login-form">
+        <h1>Login</h1>
+        <form method="post" action="authenticate.php">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br><br>
+            <input type="submit" value="Login">
+        </form>
+    </section>
+</body>
+</html>
